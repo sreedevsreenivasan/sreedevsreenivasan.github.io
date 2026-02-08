@@ -1,113 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="PBtew5snmvwHYjejeto8e5mLvWfPJBgJSOGydXRB9h0" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sreedev Sreenivasan | Portfolio</title>
     <style>
-        :root {
-            --bg: #0a0f1a;
-            --card: #161e2d;
-            --accent: #38bdf8;
-            --text: #f8fafc;
-            --secondary-text: #94a3b8;
-        }
-
-        body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            overflow: hidden;
-        }
-
-        .container {
-            background: var(--card);
-            padding: 2.5rem 2rem;
-            border-radius: 24px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-            width: 90%;
-            max-width: 400px;
-            text-align: center;
-            border: 1px solid rgba(255,255,255,0.05);
-            position: relative;
-        }
-
-        h1 { font-size: 1.6rem; margin-bottom: 5px; color: var(--accent); }
+        :root { --bg: #0a0f1a; --card: #161e2d; --accent: #38bdf8; --text: #f8fafc; --secondary-text: #94a3b8; }
+        body { font-family: sans-serif; background-color: var(--bg); color: var(--text); margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        .container { background: var(--card); padding: 2rem; border-radius: 24px; width: 90%; max-width: 400px; text-align: center; border: 1px solid rgba(255,255,255,0.05); }
+        h1 { font-size: 1.6rem; color: var(--accent); margin-bottom: 5px; }
         .subtitle { color: var(--secondary-text); font-size: 0.9rem; margin-bottom: 25px; }
-
-        .menu-page {
-            display: none;
-            flex-direction: column;
-            gap: 12px;
-            animation: fadeIn 0.4s ease-out forwards;
-        }
-
-        .active { display: flex; }
-
-        .btn {
-            text-decoration: none;
-            padding: 14px;
-            border-radius: 12px;
-            font-weight: 600;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer;
-            border: none;
-            font-size: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        /* Main Menu Buttons */
-        .btn-main { background: #1e293b; color: var(--text); border: 1px solid #334155; }
-        .btn-main:hover { background: #334155; transform: translateY(-2px); }
-
-        /* Action Buttons */
+        .menu-page { display: none; flex-direction: column; gap: 12px; }
+        .active { display: flex; animation: fadeIn 0.3s ease-out; }
+        .btn { text-decoration: none; padding: 14px; border-radius: 12px; font-weight: 600; cursor: pointer; border: none; font-size: 1rem; display: flex; align-items: center; justify-content: center; gap: 10px; transition: 0.2s; }
+        .btn-main { background: #1e293b; color: var(--text); }
         .btn-action { background: var(--accent); color: #0a0f1a; }
-        .btn-action:hover { transform: scale(1.03); box-shadow: 0 0 20px rgba(56, 189, 248, 0.4); }
-
-        .btn-back { background: transparent; color: var(--secondary-text); margin-top: 10px; font-size: 0.8rem; }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        .btn-back { background: #334155; color: white; margin-top: 15px; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
 
 <div class="container">
     <h1>Sreedev Sreenivasan</h1>
-    <p class="subtitle">Computer Science Engineering Student</p>
+    <p class="subtitle">CS Engineering Student @ MES College</p>
 
     <div id="main-menu" class="menu-page active">
-        <button class="btn btn-main" onclick="showPage('profession')">💻 Profession</button>
+        <button class="btn btn-main" onclick="showPage('profession')">🧑‍💻 Profession</button>
         <button class="btn btn-main" onclick="showPage('reports')">📄 Reports</button>
         <button class="btn btn-main" onclick="showPage('socials')">🌐 Social Platforms</button>
     </div>
 
     <div id="profession" class="menu-page">
-        <a href="https://github.com/sreedevsreenivasan/My-Coding-Journey" class="btn btn-action" target="_blank">🚀 View My Projects</a>
+        <a href="https://github.com/sreedevsreenivasan/My-Coding-Journey" class="btn btn-action" target="_blank">🚀 View My GitHub Projects</a>
         <button class="btn btn-back" onclick="showPage('main-menu')">← Back to Menu</button>
     </div>
 
     <div id="reports" class="menu-page">
-        <a href="GAME_DEV_JAVA-1.pdf" class="btn btn-action" target="_blank">📝 Snake Game Report</a>
+        <a href="https://sreedevsreenivasan.github.io/My-Coding-Journey/GAME_DEV_JAVA-1.pdf" class="btn btn-action" target="_blank">📝 Snake Game Seminar Report</a>
         <button class="btn btn-back" onclick="showPage('main-menu')">← Back to Menu</button>
     </div>
 
     <div id="socials" class="menu-page">
         <a href="https://www.linkedin.com/in/sreedevsreenivasan" class="btn btn-main" target="_blank">LinkedIn</a>
-        <a href="https://www.instagram.com/sreedev_sreenivasan_?igsh=a2g0cmZpMzAwejdr" class="btn btn-main" target="_blank">Instagram</a>
+        <a href="https://www.instagram.com/sreedev_sreenivasan_" class="btn btn-main" target="_blank">Instagram</a>
         <a href="https://www.facebook.com/share/175s83XpmV/" class="btn btn-main" target="_blank">Facebook</a>
-        <a href="https://x.com/SreedevSree24" class="btn btn-main" target="_blank">X</a>
         <a href="https://www.threads.net/@sreedev_sreenivasan_" class="btn btn-main" target="_blank">Threads</a>
         <button class="btn btn-back" onclick="showPage('main-menu')">← Back to Menu</button>
     </div>
@@ -115,11 +52,7 @@
 
 <script>
     function showPage(pageId) {
-        // Hide all pages
-        document.querySelectorAll('.menu-page').forEach(page => {
-            page.classList.remove('active');
-        });
-        // Show selected page
+        document.querySelectorAll('.menu-page').forEach(p => p.classList.remove('active'));
         document.getElementById(pageId).classList.add('active');
     }
 </script>
